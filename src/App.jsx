@@ -13,6 +13,8 @@ const App = () => {
      <ColofulMessage color="blue" >お元気ですか？</ColofulMessage>
       <ColofulMessage color="pink" >元気です！</ColofulMessage>
       <button onClick={onClickCountUp}>カウントアップ</button>
+      <p>{num}</p>
+      <p>_(:3 」∠)_</p>
     </>
   );
 };
