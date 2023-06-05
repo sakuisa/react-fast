@@ -3,13 +3,16 @@ import ColofulMessage from './components/ColorfulMessage';
 
 
 const App = () => {
-  const onClickButton = () => alert();
-  
+  const onClickCountUp = () => {
+  setNum(num + 1);
+  };
+  const[num, setNum] = useSttate(0);
   return (
     <>
       <h1 style={{ color: "red" }}>こんにちは</h1>
-     <ColofulMessage color="blue" message = "お元気ですか？" />
-      <button onClick={onClickButton}>ボタン</button>
+     <ColofulMessage color="blue" >お元気ですか？</ColofulMessage>
+      <ColofulMessage color="pink" >元気です！</ColofulMessage>
+      <button onClick={onClickCountUp}>カウントアップ</button>
     </>
   );
 };
