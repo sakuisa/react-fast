@@ -1,15 +1,12 @@
-import React from 'react'
+import React from "react";
 
 const ColorfulMesseage = (props) => {
-    console.log(props);
-    const contentStyle = {
-    color: props.color,
+  const { color, children } = props;
+  const contentStyle = {
+    color: color,
     fontSize: "18px"
   };
-    return(
-        <p style={contentStyle}>{props.message}</p>
-    );
-    
-}
+  return <p style={contentStyle}>{children}</p>;
+};
 
 export default ColorfulMesseage;
