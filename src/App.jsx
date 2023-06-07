@@ -4,7 +4,7 @@ import ColofulMessage from "./components/ColorfulMessage";
 const App = () => {
   console.log("最初");
   const [num, setNum] = useState(0);
-  const [faceShowFlag, setFaceShowFlag] = useState(true);
+  const [faceShowFlag, setFaceShowFlag] = useState(false);
 
   const onClickCountUp = () => {
     setNum(num + 1);
@@ -12,6 +12,15 @@ const App = () => {
   const onClickSwitchShowFlag = () => {
     setFaceShowFlag(!faceShowFlag);
   };
+  
+if (num > 0){
+  
+if (num % 3 === 0 ){
+    faceShowFlag || setFaceShowFlag(true);
+  }else{
+    faceShowFlag && setFaceShowFlag(false);
+  }
+}
 
   return (
     <>
