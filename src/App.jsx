@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+/* eslint react-hooks/exhaustive-deps: off*/
+import React, { useEffect, useState } from "react";
 import ColofulMessage from "./components/ColorfulMessage";
 
 const App = () => {
@@ -12,15 +13,17 @@ const App = () => {
   const onClickSwitchShowFlag = () => {
     setFaceShowFlag(!faceShowFlag);
   };
-  
-if (num > 0){
-  
-if (num % 3 === 0 ){
-    faceShowFlag || setFaceShowFlag(true);
-  }else{
-    faceShowFlag && setFaceShowFlag(false);
-  }
-}
+
+  useEffect(() => {
+    if (num > 0) {
+      if (num % 3 === 0) {
+        faceShowFlag || setFaceShowFlag(true);
+      } else {
+        faceShowFlag && setFaceShowFlag(false);
+      }
+    }
+    // eslint-disable-next-line eact-hooks/exhaustive-deps
+  }, [num]);
 
   return (
     <>
